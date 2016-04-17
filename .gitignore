@@ -1,0 +1,26 @@
+# editor-specific files
+\#*
+.#*
+*~
+.*.swp
+
+# ELF files
+*.o
+*.a
+*.so
+
+# python bytecode
+*.pyc
+*.pyo
+__pycache__
+
+# workflow
+*.orig
+
+# distutils
+build/
+dist/
+MANIFEST
+
+# rope python refactoring
+.ropeproject/
