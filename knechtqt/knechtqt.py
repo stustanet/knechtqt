@@ -2,6 +2,7 @@ import sys
 import signal
 import asyncio
 import time
+import subprocess
 
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
@@ -33,6 +34,11 @@ class KnechtQT:
 
         if self.window:
             self._close_window()
+
+        try:
+            subprocess.run(['xset', 'dpms', 'force'])
+        except FileNotFoundError as e:
+            pass
 
         label = QLabel()
         label.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
