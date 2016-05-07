@@ -36,7 +36,7 @@ class KnechtQT:
             self._close_window()
 
         try:
-            subprocess.run(['xset', 'dpms', 'force'])
+            subprocess.call(['xset', 'dpms', 'force', 'off'])
         except FileNotFoundError as e:
             pass
 
